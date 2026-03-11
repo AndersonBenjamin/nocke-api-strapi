@@ -19,7 +19,7 @@ const saveRememberNotification = async remember => {
 
 module.exports = {
     
-    "* * * * *": async ({ strapi }) => {
+    "0 22 * * *": async ({ strapi }) => {  // Todo dia às 22h (10pm)
         const registers = await strapi.entityService.findMany('api::remember.remember', { 
             filters:{
                 $or:[
