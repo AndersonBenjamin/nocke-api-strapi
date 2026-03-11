@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "remembers",
+  "info": {
+    "singularName": "remember",
+    "pluralName": "remembers",
+    "displayName": "remember",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "event": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::event.event"
+    },
+    "before": {
+      "type": "enumeration",
+      "enum": [
+        "day",
+        "week",
+        "month"
+      ]
+    },
+    "sented": {
+      "type": "boolean"
+    }
+  }
+}

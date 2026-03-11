@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "calendars",
+  "info": {
+    "singularName": "calendar",
+    "pluralName": "calendars",
+    "displayName": "calendar",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "event": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::event.event"
+    },
+    "remember": {
+      "type": "boolean",
+      "default": false
+    },
+    "rememberType": {
+      "type": "enumeration",
+      "enum": [
+        "one_day",
+        "one_week",
+        "one_month"
+      ]
+    }
+  }
+}

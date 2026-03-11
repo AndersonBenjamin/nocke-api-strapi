@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_user_academic_educations",
+  "info": {
+    "displayName": "academic_education",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "initial": {
+      "type": "date"
+    },
+    "end": {
+      "type": "date"
+    },
+    "university": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::university.university"
+    },
+    "name": {
+      "type": "string"
+    },
+    "isOngoing": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

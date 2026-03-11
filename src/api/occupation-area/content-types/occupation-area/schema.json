@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "occupation_areas",
+  "info": {
+    "singularName": "occupation-area",
+    "pluralName": "occupation-areas",
+    "displayName": "occupation area"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}

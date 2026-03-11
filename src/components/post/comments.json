@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_post_comments",
+  "info": {
+    "displayName": "comments",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "comment": {
+      "type": "text"
+    },
+    "reply": {
+      "type": "text"
+    }
+  }
+}

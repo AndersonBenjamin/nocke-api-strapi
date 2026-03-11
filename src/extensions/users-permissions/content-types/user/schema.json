@@ -1,0 +1,224 @@
+{
+  "kind": "collectionType",
+  "collectionName": "up_users",
+  "info": {
+    "name": "user",
+    "description": "",
+    "singularName": "user",
+    "pluralName": "users",
+    "displayName": "User"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "username": {
+      "type": "string",
+      "minLength": 3,
+      "unique": true,
+      "configurable": false,
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "minLength": 6,
+      "configurable": false,
+      "required": true
+    },
+    "provider": {
+      "type": "string",
+      "configurable": false
+    },
+    "password": {
+      "type": "password",
+      "minLength": 6,
+      "configurable": false,
+      "private": true,
+      "searchable": false
+    },
+    "resetPasswordToken": {
+      "type": "string",
+      "configurable": false,
+      "private": true,
+      "searchable": false
+    },
+    "confirmationToken": {
+      "type": "string",
+      "configurable": false,
+      "private": true,
+      "searchable": false
+    },
+    "confirmed": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "blocked": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "role": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.role",
+      "inversedBy": "users",
+      "configurable": false
+    },
+    "name": {
+      "type": "string"
+    },
+    "cpf": {
+      "type": "string"
+    },
+    "birthDate": {
+      "type": "date"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "address": {
+      "type": "component",
+      "repeatable": true,
+      "component": "user.address"
+    },
+    "professionalData": {
+      "type": "component",
+      "repeatable": false,
+      "component": "user.professional-data"
+    },
+    "specialty": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::specialty.specialty"
+    },
+    "sub_specialties": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::sub-specialty.sub-specialty"
+    },
+    "occupation_areas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::occupation-area.occupation-area"
+    },
+    "about": {
+      "type": "text"
+    },
+    "skills": {
+      "displayName": "skills",
+      "type": "component",
+      "repeatable": true,
+      "component": "user.skills"
+    },
+    "certificate_license": {
+      "displayName": "certificate_license",
+      "type": "component",
+      "repeatable": true,
+      "component": "user.certificate-license"
+    },
+    "publications": {
+      "displayName": "publications",
+      "type": "component",
+      "repeatable": true,
+      "component": "user.publications"
+    },
+    "members": {
+      "displayName": "member",
+      "type": "component",
+      "repeatable": true,
+      "component": "user.member"
+    },
+    "links": {
+      "displayName": "links",
+      "type": "component",
+      "repeatable": true,
+      "component": "user.links"
+    },
+    "public_profile": {
+      "type": "string"
+    },
+    "academic_education": {
+      "displayName": "academic_education",
+      "type": "component",
+      "repeatable": true,
+      "component": "user.academic-education"
+    },
+    "deleted_account": {
+      "type": "boolean",
+      "default": false
+    },
+    "city": {
+      "type": "string"
+    },
+    "uf": {
+      "type": "enumeration",
+      "enum": [
+        "RO",
+        "AC",
+        "AM",
+        "RR",
+        "PA",
+        "AP",
+        "TO",
+        "MA",
+        "PI",
+        "CE",
+        "RN",
+        "PB",
+        "PE",
+        "AL",
+        "SE",
+        "BA",
+        "MG",
+        "ES",
+        "RJ",
+        "SP",
+        "PR",
+        "SC",
+        "RS",
+        "MS",
+        "MT",
+        "GO",
+        "DF"
+      ]
+    },
+    "expertise": {
+      "type": "text"
+    },
+    "blocks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user"
+    },
+    "Others": {
+      "type": "component",
+      "repeatable": true,
+      "component": "user.others"
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "Masculino",
+        "Feminino"
+      ]
+    },
+    "like": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::like.like",
+      "mappedBy": "users_permissions_user"
+    }
+  }
+}

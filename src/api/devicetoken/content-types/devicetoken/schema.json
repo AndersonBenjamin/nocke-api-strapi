@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "devicetokens",
+  "info": {
+    "singularName": "devicetoken",
+    "pluralName": "devicetokens",
+    "displayName": "devicetoken",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "token": {
+      "type": "string"
+    },
+    "os": {
+      "type": "enumeration",
+      "enum": [
+        "android",
+        "ios"
+      ]
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}

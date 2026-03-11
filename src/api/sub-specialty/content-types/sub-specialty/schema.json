@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sub_specialties",
+  "info": {
+    "singularName": "sub-specialty",
+    "pluralName": "sub-specialties",
+    "displayName": "sub specialty"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "singularName": "event",
+    "pluralName": "events",
+    "displayName": "event",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "description": {
+      "type": "text"
+    },
+    "address": {
+      "type": "component",
+      "repeatable": false,
+      "component": "user.address"
+    },
+    "title": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "course",
+        "congress",
+        "postgraduate",
+        "medical_residency"
+      ]
+    },
+    "link": {
+      "type": "string"
+    },
+    "localization": {
+      "type": "string"
+    },
+    "data": {
+      "type": "string"
+    },
+    "name": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "begins_date": {
+      "type": "date"
+    },
+    "ends_date": {
+      "type": "date"
+    },
+    "value": {
+      "type": "decimal"
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "kind": "collectionType",
+  "collectionName": "jobs",
+  "info": {
+    "singularName": "job",
+    "pluralName": "jobs",
+    "displayName": "Job",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "salary": {
+      "type": "decimal"
+    },
+    "localization": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "pj",
+        "pf"
+      ]
+    },
+    "description": {
+      "type": "text"
+    },
+    "activity": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "period": {
+      "type": "string"
+    },
+    "schedule": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "address": {
+      "type": "component",
+      "repeatable": false,
+      "component": "user.address"
+    },
+    "specialty": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::specialty.specialty"
+    },
+    "sub_specialty": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sub-specialty.sub-specialty"
+    },
+    "occupation_area": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::occupation-area.occupation-area"
+    }
+  }
+}

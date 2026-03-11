@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_user_certificate_licenses",
+  "info": {
+    "displayName": "certificate_license",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "initial": {
+      "type": "date"
+    },
+    "end": {
+      "type": "date"
+    }
+  }
+}

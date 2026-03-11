@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_user_curso_adicionals",
+  "info": {
+    "displayName": "curso-adicional",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "nome_curso": {
+      "type": "string"
+    },
+    "descricao_curso": {
+      "type": "text"
+    },
+    "data_conclusao_curso": {
+      "type": "integer"
+    }
+  }
+}
